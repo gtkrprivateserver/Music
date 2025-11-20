@@ -1,82 +1,76 @@
 <!DOCTYPE html>
 <html lang="id">
 <head>
-    <meta charset="UTF-8">
-    <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>OneDev Company</title>
-    <link rel="stylesheet" href="style.css">
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>OneDev Company — Home</title>
+  <link rel="stylesheet" href="css/style.css">
+  <script defer src="js/sidemotis.js"></script>
 </head>
-<body class="fade">
 
-    <!-- LOADING -->
-    <div id="loading">
-        <div class="loader"></div>
-        <p>Loading OneDev Company...</p>
+<body>
+
+<button id="menu-btn">☰</button>
+
+<div id="sidebar">
+  <h2>OneDev Company</h2>
+
+  <a href="index.html">Home</a>
+
+  <button class="dropdown-btn">Company ▼</button>
+  <div class="dropdown-container">
+    <a href="about.html">About</a>
+    <a href="careers.html">Careers</a>
+    <a href="legal.html">Legal</a>
+    <a href="privacy.html">Privacy Policy</a>
+  </div>
+
+  <button class="dropdown-btn">Services ▼</button>
+  <div class="dropdown-container">
+    <a href="services.html">Our Services</a>
+    <a href="products.html">Products</a>
+  </div>
+
+  <a href="contact.html">Contact</a>
+</div>
+
+<div class="content">
+  <h1>Welcome to OneDev Company</h1>
+  <p>Perusahaan teknologi profesional yang menyediakan solusi modern & megah.</p>
+</div>
+
+<footer class="footer">
+  <div class="footer-container">
+    <div class="footer-section">
+      <h3>OneDev Company</h3>
+      <p>Solusi teknologi modern, megah, dan profesional.</p>
     </div>
 
-    <!-- SIDEBAR -->
-    <aside id="sidebar">
-        <div class="sidebar-header">
-            <h2>OneDev</h2>
-            <button id="closeSidebar">×</button>
-        </div>
+    <div class="footer-section">
+      <h4>Company</h4>
+      <a href="about.html">About</a>
+      <a href="careers.html">Careers</a>
+      <a href="privacy.html">Privacy Policy</a>
+      <a href="legal.html">Legal</a>
+    </div>
 
-        <ul class="menu">
-            <li><a href="index.html">🏠 Home</a></li>
+    <div class="footer-section">
+      <h4>Services</h4>
+      <a href="services.html">Our Services</a>
+      <a href="products.html">Products</a>
+    </div>
 
-            <li class="dropdown">
-                <a class="dropdown-btn">🏢 Company ▼</a>
-                <ul class="dropdown-content">
-                    <li><a href="about.html">Tentang Kami</a></li>
-                    <li><a href="services.html">Layanan</a></li>
-                    <li><a href="team.html">Team</a></li>
-                </ul>
-            </li>
+    <div class="footer-section">
+      <h4>Contact</h4>
+      <p>Email: support@onedev.com</p>
+      <p>Phone: +62 812-3456-7890</p>
+    </div>
+  </div>
 
-            <li><a href="contact.html">📞 Contact</a></li>
+  <div class="footer-bottom">
+    © 2025 OneDev Company. All Rights Reserved.
+  </div>
+</footer>
 
-            <li class="dropdown">
-                <a class="dropdown-btn">⚖ Legal ▼</a>
-                <ul class="dropdown-content">
-                    <li><a href="privacy.html">Privacy Policy</a></li>
-                    <li><a href="legal.html">Legal</a></li>
-                </ul>
-            </li>
-        </ul>
-    </aside>
-
-    <!-- NAVBAR -->
-    <header>
-        <button id="openSidebar">☰</button>
-        <h1>OneDev Company</h1>
-
-        <div class="nav-right">
-            <div class="nav-dropdown">
-                <button class="nav-dropbtn">Menu ▼</button>
-                <div class="nav-dropdown-content">
-                    <a href="index.html">Home</a>
-                    <a href="about.html">About</a>
-                    <a href="services.html">Services</a>
-                    <a href="contact.html">Contact</a>
-                </div>
-            </div>
-        </div>
-    </header>
-
-    <!-- HERO -->
-    <section class="hero">
-        <div class="hero-content">
-            <h2>Solusi Teknologi Masa Depan</h2>
-            <p>OneDev Company memimpin inovasi digital dengan teknologi modern dan kualitas premium.</p>
-            <a href="about.html" class="btn">Pelajari Lebih ➜</a>
-        </div>
-    </section>
-
-    <!-- FOOTER -->
-    <footer>
-        <p>© 2025 OneDev Company • All Rights Reserved</p>
-    </footer>
-
-    <script src="script.js"></script>
 </body>
 </html>
