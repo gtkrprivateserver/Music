@@ -4,72 +4,29 @@
   <meta charset="UTF-8">
   <meta name="viewport" content="width=device-width, initial-scale=1.0">
   <title>OneDev Company — Home</title>
-  <link rel="stylesheet" href="css/style.css">
-  <script defer src="js/sidemotis.js"></script>
+  <link rel="stylesheet" href="assets/css/style.css">
+  <script src="assets/js/sidemots.js" defer></script>
 </head>
-
 <body>
 
-<button id="menu-btn">☰</button>
+<header class="nav">
+  <div class="logo">OneDev Company</div>
+  <button class="menu-btn" id="menuBtn">☰</button>
+</header>
 
-<div id="sidebar">
-  <h2>OneDev Company</h2>
+<aside class="sidebar" id="sidebar">
+  <ul id="sidebarMenu"></ul>
+</aside>
 
-  <a href="index.html">Home</a>
+<main>
+  <section class="hero">
+    <h1>Selamat Datang di OneDev Company</h1>
+    <p>Kami menyediakan solusi teknologi modern untuk bisnis Anda.</p>
+  </section>
+</main>
 
-  <button class="dropdown-btn">Company ▼</button>
-  <div class="dropdown-container">
-    <a href="about.html">About</a>
-    <a href="careers.html">Careers</a>
-    <a href="legal.html">Legal</a>
-    <a href="privacy.html">Privacy Policy</a>
-  </div>
-
-  <button class="dropdown-btn">Services ▼</button>
-  <div class="dropdown-container">
-    <a href="services.html">Our Services</a>
-    <a href="products.html">Products</a>
-  </div>
-
-  <a href="contact.html">Contact</a>
-</div>
-
-<div class="content">
-  <h1>Welcome to OneDev Company</h1>
-  <p>Perusahaan teknologi profesional yang menyediakan solusi modern & megah.</p>
-</div>
-
-<footer class="footer">
-  <div class="footer-container">
-    <div class="footer-section">
-      <h3>OneDev Company</h3>
-      <p>Solusi teknologi modern, megah, dan profesional.</p>
-    </div>
-
-    <div class="footer-section">
-      <h4>Company</h4>
-      <a href="about.html">About</a>
-      <a href="careers.html">Careers</a>
-      <a href="privacy.html">Privacy Policy</a>
-      <a href="legal.html">Legal</a>
-    </div>
-
-    <div class="footer-section">
-      <h4>Services</h4>
-      <a href="services.html">Our Services</a>
-      <a href="products.html">Products</a>
-    </div>
-
-    <div class="footer-section">
-      <h4>Contact</h4>
-      <p>Email: support@onedev.com</p>
-      <p>Phone: +62 812-3456-7890</p>
-    </div>
-  </div>
-
-  <div class="footer-bottom">
-    © 2025 OneDev Company. All Rights Reserved.
-  </div>
+<footer>
+  <p>© 2025 OneDev Company. All Rights Reserved.</p>
 </footer>
 
 </body>
