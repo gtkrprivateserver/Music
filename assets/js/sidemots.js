@@ -1,27 +1,57 @@
-// AUTO SIDEBAR MENU
-const pages = [
-  { name: "Home", link: "index.html" },
-  { name: "Tentang", link: "about.html" },
-  { name: "Layanan", link: "services.html" },
-  { name: "Kontak", link: "contact.html" },
-  { name: "Privacy Policy", link: "privacy.html" },
-  { name: "Legal", link: "legal.html" }
-];
+/* ========================================================
+   OneDev Company — sidemots.js
+   Sidebar Otomatis + Dropdown + Loading Screen Fix
+======================================================== */
 
-window.addEventListener("DOMContentLoaded", () => {
-  const sidebar = document.getElementById("sidebar");
-  const menuBtn = document.getElementById("menuBtn");
-  const sidebarMenu = document.getElementById("sidebarMenu");
+// ---- Render Sidebar Otomatis ----
+document.addEventListener("DOMContentLoaded", () => {
+  const sidebarContainer = document.getElementById("sidebar");
 
-  // Generate menu otomatis
-  pages.forEach(p => {
-    const li = document.createElement("li");
-    li.innerHTML = `<a href="${p.link}" style="color:white;text-decoration:none;">${p.name}</a>`;
-    sidebarMenu.appendChild(li);
+  if (sidebarContainer) {
+    sidebarContainer.innerHTML = `
+      <div class="sidebar">
+        <div class="title">OneDev</div>
+        <ul>
+          <li><a href="index.html">Home</a></li>
+
+          <li>
+            <a href="#" class="dropdown-btn">Company ▼</a>
+            <div class="dropdown-items">
+              <a href="about.html">About Us</a>
+              <a href="legal.html">Legal</a>
+              <a href="privacy.html">Privacy Policy</a>
+            </div>
+          </li>
+
+          <li>
+            <a href="#" class="dropdown-btn">Services ▼</a>
+            <div class="dropdown-items">
+              <a href="services.html">All Services</a>
+            </div>
+          </li>
+
+          <li><a href="contact.html">Contact</a></li>
+        </ul>
+      </div>
+    `;
+  }
+
+  // ---- Dropdown System ----
+  document.querySelectorAll(".dropdown-btn").forEach(btn => {
+    btn.addEventListener("click", () => {
+      const dropdown = btn.nextElementSibling;
+      dropdown.style.display =
+        dropdown.style.display === "block" ? "none" : "block";
+    });
   });
+});
 
-  // toggle sidebar
-  menuBtn.addEventListener("click", () => {
-    sidebar.classList.toggle("open");
-  });
+// ---- Loading Screen (FIX anti-error) ----
+window.addEventListener("load", () => {
+  const loader = document.getElementById("onedev-loading");
+
+  // Jika element loading ditemukan → sembunyikan
+  if (loader) {
+    loader.classList.add("hide");
+  }
 });
