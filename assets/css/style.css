@@ -1,71 +1,185 @@
-body {
+/* -----------------------------------
+   GLOBAL PAGE STYLE
+----------------------------------- */
+* {
   margin: 0;
-  font-family: Arial, sans-serif;
-  background: #f5f5f5;
+  padding: 0;
+  box-sizing: border-box;
+  font-family: "Poppins", sans-serif;
 }
 
-.nav {
+body {
+  background: #0b0e14;
+  color: #ffffff;
+  line-height: 1.6;
+  overflow-x: hidden;
+}
+
+/* Smooth scrollbar */
+::-webkit-scrollbar {
+  width: 8px;
+}
+::-webkit-scrollbar-thumb {
+  background: linear-gradient(180deg, #007bff, #00c6ff);
+  border-radius: 50px;
+}
+
+/* -----------------------------------
+   LOADING SCREEN ONEDEV
+----------------------------------- */
+#onedev-loading {
+  position: fixed;
+  z-index: 9999;
+  top: 0;
+  left: 0;
+  width: 100%;
+  height: 100%;
+  background: #06080d;
   display: flex;
-  justify-content: space-between;
+  flex-direction: column;
+  justify-content: center;
   align-items: center;
-  background: #202020;
-  color: #fff;
-  padding: 15px;
+  transition: opacity .6s ease;
 }
 
-.logo {
-  font-size: 20px;
-  font-weight: bold;
+.onedev-logo {
+  font-size: 48px;
+  font-weight: 700;
+  letter-spacing: 3px;
+  background: linear-gradient(90deg, #00c6ff, #007bff);
+  -webkit-background-clip: text;
+  color: transparent;
+  animation: logoPulse 1.6s infinite;
 }
 
-.menu-btn {
-  font-size: 22px;
-  background: none;
-  border: none;
-  color: white;
-  cursor: pointer;
+@keyframes logoPulse {
+  0% { opacity: .3; transform: scale(.95); }
+  50% { opacity: 1; transform: scale(1); }
+  100% { opacity: .3; transform: scale(.95); }
 }
 
+.loader {
+  width: 65px;
+  height: 65px;
+  border: 6px solid #1b1f27;
+  border-top-color: #00c6ff;
+  border-radius: 50%;
+  animation: spin 0.7s linear infinite;
+  margin-top: 20px;
+}
+
+@keyframes spin {
+  to { transform: rotate(360deg); }
+}
+
+#onedev-loading.hide {
+  opacity: 0;
+  pointer-events: none;
+}
+
+/* -----------------------------------
+   SIDEBAR ONEDEV
+----------------------------------- */
 .sidebar {
   position: fixed;
-  left: -260px;
-  width: 260px;
+  left: 0;
   top: 0;
+  width: 260px;
   height: 100%;
-  background: #111;
-  color: white;
+  background: #0f1218;
   padding-top: 70px;
-  transition: 0.3s;
+  border-right: 1px solid #1f2530;
+  transition: .3s ease;
+  overflow-y: auto;
 }
 
-.sidebar.open {
-  left: 0;
+.sidebar .title {
+  text-align: center;
+  font-size: 24px;
+  font-weight: 700;
+  margin-top: -50px;
+  margin-bottom: 20px;
+  color: #00c6ff;
 }
 
 .sidebar ul {
   list-style: none;
-  padding: 0;
+  padding: 10px;
 }
 
-.sidebar li {
-  padding: 15px;
-  border-bottom: 1px solid #333;
-  cursor: pointer;
+.sidebar ul li {
+  margin: 12px 0;
 }
 
-.sidebar li:hover {
-  background: #222;
+.sidebar ul li a {
+  display: flex;
+  justify-content: space-between;
+  padding: 12px 16px;
+  background: #131821;
+  border: 1px solid #1f2530;
+  border-radius: 10px;
+  text-decoration: none;
+  color: #d9d9d9;
+  font-size: 15px;
+  transition: .25s;
 }
 
-.hero {
-  padding: 50px;
-  text-align: center;
+.sidebar ul li a:hover {
+  background: #1a202c;
+  border-color: #00c6ff;
+  color: #ffffff;
 }
 
+/* Dropdown */
+.dropdown-items {
+  display: none;
+  padding-left: 15px;
+}
+
+.dropdown-items a {
+  background: #151a23;
+}
+
+/* -----------------------------------
+   MAIN CONTENT
+----------------------------------- */
+.main {
+  margin-left: 260px;
+  padding: 40px;
+}
+
+h1, h2, h3 {
+  font-weight: 700;
+  letter-spacing: 1px;
+}
+
+.section-box {
+  padding: 25px;
+  background: #131821;
+  border: 1px solid #202734;
+  border-radius: 15px;
+  margin-bottom: 25px;
+  box-shadow: 0 0 20px rgba(0,0,0,.3);
+  transition: transform .25s;
+}
+
+.section-box:hover {
+  transform: translateY(-3px);
+}
+
+/* -----------------------------------
+   FOOTER
+----------------------------------- */
 footer {
-  margin-top: 40px;
-  background: #202020;
-  padding: 20px;
-  color: white;
+  margin-top: 50px;
+  padding: 30px 0;
   text-align: center;
+  background: #0f1218;
+  border-top: 1px solid #1f2530;
+  color: #a9a9a9;
+  font-size: 14px;
+}
+
+footer span {
+  color: #00c6ff;
 }
