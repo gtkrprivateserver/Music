@@ -1,0 +1,74 @@
+<!DOCTYPE html>
+<html lang="id">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>OneDev Company</title>
+    <link rel="stylesheet" href="style.css">
+</head>
+
+<body>
+
+    <!-- LOADING SCREEN -->
+    <div id="loading">
+        <div class="loader"></div>
+        <p>Loading OneDev Company...</p>
+    </div>
+
+    <!-- SIDEBAR -->
+    <aside id="sidebar">
+        <div class="sidebar-header">
+            <h2>OneDev</h2>
+            <button id="closeSidebar">×</button>
+        </div>
+
+        <ul class="menu">
+            <li><a href="index.html">🏠 Home</a></li>
+
+            <li class="dropdown">
+                <a href="#" class="dropdown-btn">🏢 Company ▼</a>
+                <ul class="dropdown-content">
+                    <li><a href="about.html">Tentang Kami</a></li>
+                    <li><a href="services.html">Layanan</a></li>
+                </ul>
+            </li>
+
+            <li><a href="contact.html">📞 Contact</a></li>
+
+            <li class="dropdown">
+                <a class="dropdown-btn">⚖ Legal ▼</a>
+                <ul class="dropdown-content">
+                    <li><a href="privacy.html">Privacy Policy</a></li>
+                    <li><a href="legal.html">Legal</a></li>
+                </ul>
+            </li>
+        </ul>
+    </aside>
+
+    <!-- NAVBAR -->
+    <header>
+        <button id="openSidebar">☰</button>
+        <h1>OneDev Company</h1>
+
+        <div class="nav-right">
+            <div class="nav-dropdown">
+                <button class="nav-dropbtn">Menu ▼</button>
+                <div class="nav-dropdown-content">
+                    <a href="index.html">Home</a>
+                    <a href="about.html">About</a>
+                    <a href="services.html">Services</a>
+                </div>
+            </div>
+        </div>
+    </header>
+
+    <!-- CONTENT -->
+    <section class="hero">
+        <h2>Selamat Datang di OneDev Company</h2>
+        <p>Kami menyediakan solusi teknologi modern dengan kualitas terbaik.</p>
+        <a href="about.html" class="btn">Pelajari Lebih</a>
+    </section>
+
+    <script src="script.js"></script>
+</body>
+</html>
